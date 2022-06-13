@@ -40,14 +40,14 @@ repos:
     hooks:
     -   id: setup-cfg-fmt
 -   repo: https://github.com/psf/black
-    rev: 21.6b0
+    rev: 22.3.0
     hooks:
     -   id: black
 -   repo: https://github.com/asottile/blacken-docs
     rev: v1.10.0
     hooks:
     -   id: blacken-docs
-        additional_dependencies: [black]
+        additional_dependencies: [black==21.12b0]
 -   repo: https://github.com/PyCQA/flake8
     rev: 3.9.2
     hooks:
@@ -75,13 +75,7 @@ repos:
     rev: 1.4.0
     hooks:
     -   id: interrogate
-        args: [-v, --fail-under=40, src, tests]
-        exclude: _version.py
--   repo: https://github.com/codespell-project/codespell
-    rev: v2.1.0
-    hooks:
-    -   id: codespell
-        args: [-L hist,-L unparseable]
+        args: [-v, --fail-under=10, src, tests]
 -   repo: meta
     hooks:
     -   id: check-hooks-apply

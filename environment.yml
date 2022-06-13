@@ -18,15 +18,31 @@ dependencies:
 
   # Package dependencies
   - estimagic
+  - numpy
+  - scipy
+  - pandas
+  - jax>=0.3.0
+  - jaxlib>=0.3.0
+  - networkx
+  - dags
+  - pybaum
 
   # Misc
+  - numba
   - black
   - jupyterlab
   - matplotlib
+  - nodejs
   - pdbpp
   - pre-commit
   - pydot
   - pytest
   - pytest-cov
   - tox-conda
+  - sphinx
+  - sphinx-panels
+  - sphinxcontrib-bibtex
+  - pydata-sphinx-theme>=0.3.0
 
+  - pip:
+      - -e .
